@@ -1,0 +1,28 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Fjalla One", sans-serif;
+  background: #fbfaf5;
+}
+
+h3,
+h4 {
+  font-weight: 300;
+}
+
+.App {
+  transition: all 0.7s ease;
+}
+
+.library-active {
+  margin-left: 15%;
+}
+
+@import "./player";
+@import "./song";
+@import "./library";
+@import "./nav";

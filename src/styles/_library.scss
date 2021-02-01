@@ -1,0 +1,79 @@
+* {
+  scrollbar-width: thin;
+  scrollbar-color: rgb(143, 144, 145) transparent;
+}
+
+* ::-webkit-scrollbar {
+  width: 7px;
+}
+
+*::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+* ::-webkit-scrollbar-thumb {
+  background: rgb(143, 144, 145);
+  border-radius: 10px;
+}
+
+.library {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 30%;
+  height: 100%;
+  background-color: white;
+  overflow-y: auto;
+  box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 1px, rgba(0, 0, 0, 0.07) 0px 2px 2px,
+    rgba(0, 0, 0, 0.07) 0px 4px 4px, rgba(0, 0, 0, 0.07) 0px 8px 8px,
+    rgba(0, 0, 0, 0.07) 0px 16px 16px;
+  transform: translateX(-100%);
+  transition: all 0.7s ease;
+  opacity: 0;
+
+  h2 {
+    padding: 2rem;
+  }
+
+  .library-song-container {
+    display: flex;
+    align-items: center;
+    padding: 1rem 2rem 1rem 2rem;
+    transition: all 0.5s ease;
+    cursor: pointer;
+
+    &:hover {
+      background-color: #dcfffc;
+    }
+
+    img {
+      width: 35%;
+    }
+    .library-song-description {
+      padding-left: 1rem;
+
+      h3 {
+        font-size: 1.15rem;
+      }
+
+      h4 {
+        font-size: 0.85rem;
+      }
+    }
+  }
+}
+
+.selected {
+  background: #92fffc;
+}
+
+.active-library {
+  transform: translateX(0);
+  opacity: 1;
+}
+
+@media screen and (max-width: 720px) {
+  .library {
+    width: 100%;
+  }
+}
